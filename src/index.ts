@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import { Request, Response } from 'express';
 import { port } from './config';
 import UserRoutes from './routes/user.routes';
+import LoginRoutes from './routes/login.routes';
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get('/', async (req: Request, res: Response) => {
 
 //routes
 app.use('/users', UserRoutes);
+app.use('/login', LoginRoutes);
 
 
 
