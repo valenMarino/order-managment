@@ -14,6 +14,8 @@ class UserRoutes{
 
   private initializateRoutes(){
     this.router.get('/', authentication,this.userController.getUsers);
+    this.router.get('/:id', authentication,this.userController.getUser);
+    this.router.post('/', authentication, this.userController.saveUser);
   }
 }
 
